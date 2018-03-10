@@ -21,7 +21,10 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Register" />
         <activity android:name=".HoaxActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".TextSearch" />
+        <activity android:name=".ImageSearch"></activity>
     </application>
 
 </manifest>

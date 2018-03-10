@@ -33,15 +33,6 @@
                 android:orientation="vertical"></LinearLayout>
 
             <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="false"
-                android:background="@color/transparent"
-                android:cropToPadding="false"
-                app:srcCompat="@android:drawable/ic_menu_search" />
-
-            <ImageButton
                 android:id="@+id/profileBtn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -129,5 +120,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
         android:clickable="true"
+        android:onClick="fab"
         app:srcCompat="@android:drawable/ic_input_add" />
 </FrameLayout>

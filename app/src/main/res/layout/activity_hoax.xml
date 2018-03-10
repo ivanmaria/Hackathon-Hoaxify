@@ -7,6 +7,13 @@
     android:orientation="vertical"
     tools:context="com.github.ivanmaria.hoaxify.HoaxActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar5"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,10 +37,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/hoaxtext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="This is a hoax"
+                        android:text="Loading.."
                         android:textAppearance="@style/TextAppearance.AppCompat" />
 
                     <ImageView
@@ -55,13 +62,13 @@
                             android:id="@+id/textView5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Feeling: " />
+                            android:text="Reality:" />
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id/hoaxfeeling"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="25" />
+                            android:text="0" />
 
                         <TextView
                             android:id="@+id/textView6"
@@ -71,10 +78,10 @@
                             android:text="Comment: " />
 
                         <TextView
-                            android:id="@+id/textView8"
+                            android:id="@+id/hoaxcomment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="4" />
+                            android:text="0" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -83,24 +90,27 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/button"
+                            android:id="@+id/real"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="positive" />
+                            android:onClick="real"
+                            android:text="real" />
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/fake"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="negative" />
+                            android:onClick="fake"
+                            android:text="fake" />
 
                         <Button
-                            android:id="@+id/button3"
+                            android:id="@+id/flagpost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:onClick="flagpost"
                             android:text="flag" />
 
                     </LinearLayout>
@@ -132,20 +142,21 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/typecomment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:maxLines="5"
             android:ems="10"
             android:hint="Your Comment..."
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:maxLines="5" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/sendComment"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:gravity="end"
+            android:onClick="sendComment"
             app:srcCompat="@android:drawable/ic_menu_send" />
     </LinearLayout>
 

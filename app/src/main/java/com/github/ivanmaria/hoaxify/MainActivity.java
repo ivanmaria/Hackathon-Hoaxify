@@ -62,9 +62,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void profileBtn(View v)
+    {
+        Intent in = new Intent(MainActivity.this,ProfileActivity.class);
+        startActivity(in);
+    }
 
-
-
+    public void fab(View v)
+    {
+        Intent in = new Intent(MainActivity.this,SearchActivity.class);
+        startActivity(in);
+    }
 
 
 
@@ -210,6 +218,18 @@ public class MainActivity extends AppCompatActivity {
                         HoaxListAdapter adapter1 = new HoaxListAdapter(getApplicationContext(), R.layout.hoax_list, hoaxmyList);
                         myHoax.setAdapter(adapter1);
 
+                        myHoax.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                            public void onItemClick(AdapterView<?> arg0, View v, int arg2,
+                                                    long arg3) {
+                                //here v is your ListItem's layout.
+                                TextView tv = (TextView) v.findViewById(R.id.hoaxid);
+                                //Toast.makeText(getApplicationContext(), tv.getText().toString(), Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), HoaxActivity.class);
+                                intent.putExtra("hoax_id", tv.getText().toString());
+                                startActivity(intent);
+                            }
+                        });
 
                     } else {
                         Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
