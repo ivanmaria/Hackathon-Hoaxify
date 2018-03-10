@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Register" />
-        <activity android:name=".HoaxActivity"></activity>
+        <activity android:name=".HoaxActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

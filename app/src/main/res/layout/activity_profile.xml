@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    tools:context="com.github.ivanmaria.hoaxify.ProfileActivity">
+
+    <TextView
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Profile"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/pname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name: "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/pdesig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Designation: "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/pphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone: "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/pemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/changepass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginVertical="20dp"
+        android:onClick="changePassword"
+        android:text="Change Password"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Logout"
+        android:text="Logout" />
+
+</LinearLayout>
