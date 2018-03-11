@@ -78,13 +78,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" height="500px" src="img/img1.jpg" alt="First slide">
+      <img class="d-block w-100" height="300px" src="img/img1.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" height="500px" src="img/image4.jpg" alt="Second slide">
+      <img class="d-block w-100" height="300px" src="img/image4.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" height ="500px" src="img/image3.jpg" alt="Third slide">
+      <img class="d-block w-100" height ="300px" src="img/image3.jpg" alt="Third slide">
     </div>
     <h1 style="padding: 8px"></h1>
   </div>
@@ -152,7 +152,7 @@
 
 <section>
 
-    <div class="jumbotron text-center">
+    <div class="jumbotron text-center p-3 mb-2 bg-primary text-white">
   <div class="container">
     <h1 class="display-4">About Hoaxify Android App</h1>
     <p class="lead">It is very easy to find the truth and spread the rumors. This is also called as hoax. Hoaxes have been around even before the birth of internet where propagators have used mouth to mouth, post card and printed letter as channel. With the advancement of technology it has become even simpler to do so.</p>

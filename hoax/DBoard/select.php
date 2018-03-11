@@ -3,18 +3,6 @@
  session_start();
 
  $output = '';
-
-
-
- $output .= '  
-      <div class="table-responsive">  
-           <table class="table table-bordered">  
-                <tr>  
-                     <th width="10%">User Id</th>  
-                     <th width="40%">Message</th>   
-                     <th width="10%">Category Id</th>  
-                     <th width="10%">Delete</th>
-                </tr>';  
  
  if(isset($_POST["query"])){
   $sear = $_POST["query"];
@@ -29,6 +17,20 @@ else{
  $result = mysqli_query($mysqli, $sql);
 
  $rows = mysqli_num_rows($result);
+
+ echo "Total number of Entries : $rows";
+
+  $output .= '  
+      <div class="table-responsive">  
+           <table class="table table-bordered">  
+                <tr>  
+                     <th width="10%">User Id</th>  
+                     <th width="40%">Message</th>   
+                     <th width="10%">Category Id</th>  
+                     <th width="10%">Delete</th>
+                </tr>';  
+
+
  if($rows > 0)  
  {  
       while($row = mysqli_fetch_array($result))  

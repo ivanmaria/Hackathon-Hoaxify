@@ -126,12 +126,12 @@ public class HoaxActivity extends AppCompatActivity {ArrayList<CommentData> data
                         int val = Integer.parseInt(temp1);
                         if(val>0)
                         {
-                            card.setCardBackgroundColor(Color.GREEN);
+                            card.setCardBackgroundColor(0xFFCCFF90);
 
                         }
                         else if(val<0)
                         {
-                            card.setCardBackgroundColor(Color.RED);
+                            card.setCardBackgroundColor(0xFFFF8A80);
                         }
                         if(obj.getInt("vote")==1)
                         {
