@@ -25,7 +25,7 @@ else
 	{	
 		
 		$response['hoax_id_'.$i] = $row['hoax_id'];
-		$response['comment_'.$i] = $row['message'];
+		$response['message_'.$i] = $row['message'];
 		
 		$i++;
 		

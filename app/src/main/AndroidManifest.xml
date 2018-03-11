@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Login"
+            android:name=".SplashScreen"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +35,7 @@
         <activity
             android:name=".SearchActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

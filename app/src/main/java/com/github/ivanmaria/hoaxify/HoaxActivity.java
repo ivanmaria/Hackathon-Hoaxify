@@ -3,8 +3,10 @@ package com.github.ivanmaria.hoaxify;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
+import android.support.v4.app.NotificationCompatSideChannelService;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -29,6 +31,7 @@ public class HoaxActivity extends AppCompatActivity {ArrayList<CommentData> data
     String id;
     EditText typeComment;
     Button real,fake,flagpost;
+    CardView card;
     private static CommentAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,7 @@ public class HoaxActivity extends AppCompatActivity {ArrayList<CommentData> data
         fake=findViewById(R.id.fake);
         flagpost=findViewById(R.id.flagpost);
         commentList=(ListView)findViewById(R.id.commentList);
-
+        card = findViewById(R.id.card);
         Hoax();
 
     }
@@ -119,6 +122,17 @@ public class HoaxActivity extends AppCompatActivity {ArrayList<CommentData> data
                         TextView hoaxcomment = findViewById(R.id.hoaxcomment);
                         hoaxtext.setText(obj.getString("text"));
                         hoaxfeeling.setText(obj.getString("num_vote"));
+                        String temp1 = obj.getString("num_vote");
+                        int val = Integer.parseInt(temp1);
+                        if(val>0)
+                        {
+                            card.setCardBackgroundColor(Color.GREEN);
+
+                        }
+                        else if(val<0)
+                        {
+                            card.setCardBackgroundColor(Color.RED);
+                        }
                         if(obj.getInt("vote")==1)
                         {
                             real.setTextColor(Color.BLUE);

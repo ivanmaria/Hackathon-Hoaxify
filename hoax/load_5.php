@@ -4,7 +4,7 @@
 $mysqli = new mysqli("localhost", "atharva", "ath", "hoax");
 $response = array(); //to be encoded 
 
-$result=$mysqli->query("SELECT hoax_id, message ,date_time FROM hoax ORDER BY date_time LIMIT 5"); //query to be inserted
+$result=$mysqli->query("SELECT hoax_id, message ,date_time FROM hoax ORDER BY date_time LIMIT 50"); //query to be inserted
 
 
  if(!mysqli_affected_rows($mysqli))
@@ -21,8 +21,8 @@ $result=$mysqli->query("SELECT hoax_id, message ,date_time FROM hoax ORDER BY da
  	while($row = $result->fetch_assoc())
  	{	
 		
- 		$response['hoax_id_'+$i] = $row['hoax_id'];
- 		$response['message_'+$i] = $row['message'];
+ 		$response['hoax_id_'.$i] = $row['hoax_id'];
+ 		$response['message_'.$i] = $row['message'];
 		
  		$i++;
  		

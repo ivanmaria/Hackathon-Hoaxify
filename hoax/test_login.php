@@ -2,11 +2,11 @@
 <html>  
 <body>
 
-<form action="hoax_info.php" method="post">
+<form action="search.php" method="post">
 
- hoaxid<input type="text" name="hoax_id"><br>
- 
-userid<input type="text" name="user_id"><br>
+ date_time<input type="text" name="text"><br>
+
+
 
 
  

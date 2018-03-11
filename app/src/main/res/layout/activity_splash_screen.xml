@@ -13,6 +13,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hoax or Truth?"
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="297dp" />
+        android:textSize="50dp" />
 </LinearLayout>

@@ -5,9 +5,9 @@ $rsponse = array();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$result = $mysqli->query("SELECT * FROM USER WHERE contact = '$username' OR email = '$username' AND password = '$password'");
+$result = $mysqli->query("SELECT * FROM user WHERE contact = '$username' OR email = '$username' AND password = '$password'");
 
-if(!mysqli_affected_rows($mysqli))
+if(mysqli_affected_rows($mysqli)=='0')
 {
 	$response['status'] = "false";
 	$response['message'] = "INCORRECT USERNAME OR PASSWORD";
@@ -22,7 +22,7 @@ else
 
 	$row = $result->fetch_assoc();
  	 
-	$response['user_id'] = $row['user_id'];
+	$response['userid'] = $row['user_id'];
 	$response['designation'] = $row['designation'];
 	$response['email'] = $row['email'];
 	$response['name'] = $row['name'];

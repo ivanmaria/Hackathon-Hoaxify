@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     public void profileBtn(View v)
     {
         Intent in = new Intent(MainActivity.this,ProfileActivity.class);

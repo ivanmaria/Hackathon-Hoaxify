@@ -14,6 +14,4 @@ if ($mysqli->connect_error)
     echo json_encode($response);
     die("Connection failed: " . $conn->connect_error);
 } 
-echo "db working";
-
 ?>

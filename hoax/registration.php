@@ -23,14 +23,11 @@ $email = test_input($_POST['email']);
 $contact = test_input($_POST['contact']);
 $designation = test_input($_POST['designation']);
 
-
 $password = test_input($_POST['password']);
 
 
 
 $result = $mysqli->query("INSERT INTO user(designation, email, password, name, contact) VALUES ('$designation', '$email', '$password', '$name', '$contact')");
-
-
 
 
  if(mysqli_affected_rows($mysqli) == '1')
