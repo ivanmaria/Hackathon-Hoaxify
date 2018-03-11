@@ -107,7 +107,7 @@ EditText inputtext;
 
         //validating inputs
         if (input.equals("")) {
-            inputtext.setError("Please enter your username");
+            inputtext.setError("Please enter your message");
             inputtext.requestFocus();
             return;
         }
