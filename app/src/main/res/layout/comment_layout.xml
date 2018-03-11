@@ -98,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="Agree"
+                    android:onClick="commentbtn"
                     android:text="agree" />
 
                 <Button
@@ -106,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="Disagree"
+                    android:onClick="commentbtn"
                     android:text="disagree" />
 
                 <Button
@@ -114,6 +114,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="commentbtn"
                     android:text="flag" />
 
             </LinearLayout>

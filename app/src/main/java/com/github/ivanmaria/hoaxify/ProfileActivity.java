@@ -42,5 +42,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
     public void Logout(View v){
         SharedPrefManager.getInstance(getApplicationContext()).logout();
+        finish();
     }
 }

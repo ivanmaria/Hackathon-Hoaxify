@@ -92,6 +92,7 @@ String user,pass;
                         SharedPrefManager.getInstance(getApplicationContext()).saveString("email", email);
                         SharedPrefManager.getInstance(getApplicationContext()).saveString("name", name);
                         SharedPrefManager.getInstance(getApplicationContext()).saveString("contact", contact);
+                        SharedPrefManager.getInstance(getApplicationContext()).saveInt("login", 1);
 
                         finish();
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));

@@ -45,16 +45,14 @@ public class HoaxActivity extends AppCompatActivity {ArrayList<CommentData> data
 
     }
     public void real(View v){
-
+        upvote();
     }
     public void fake(View v){
-
+        downvote();
     }
     public void flagpost(View v){
-
+        flag();
     }
-
-
 
 
     public static void setListViewHeightBasedOnChildren(ListView listView) {
@@ -82,7 +80,14 @@ public class HoaxActivity extends AppCompatActivity {ArrayList<CommentData> data
         insertComment();
     }
 
-
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent in = new Intent(HoaxActivity.this,MainActivity.class);
+        startActivity(in);
+        finish();
+    }
 
     private void Hoax() {
 
@@ -125,7 +130,7 @@ public class HoaxActivity extends AppCompatActivity {ArrayList<CommentData> data
 
                         if(obj.getInt("flag")==1)
                         {
-                            flagpost.setTextColor(Color.BLUE);
+                            flagpost.setTextColor(Color.RED);
                         }
 
                         int temp = obj.getInt("num_comment");
@@ -206,6 +211,7 @@ public class HoaxActivity extends AppCompatActivity {ArrayList<CommentData> data
                         Intent intent = new Intent(getApplicationContext(), HoaxActivity.class);
                         intent.putExtra("hoax_id", id);
                         startActivity(intent);
+                        finish();
 
                     } else {
                         Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
@@ -232,4 +238,189 @@ public class HoaxActivity extends AppCompatActivity {ArrayList<CommentData> data
         insertComment ul = new insertComment();
         ul.execute();
     }
+
+
+
+
+
+
+
+
+    private void downvote() {
+
+        class downvote extends AsyncTask<Void, Void, String> {
+
+            ProgressBar progressBar;
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                progressBar = (ProgressBar) findViewById(R.id.progressBar5);
+                progressBar.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                progressBar.setVisibility(View.GONE);
+
+
+                try {
+                    //converting response to json object
+                    JSONObject obj = new JSONObject(s);
+
+                    //if no error in response
+                    if (obj.getBoolean("status")) {
+                        Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), HoaxActivity.class);
+                        intent.putExtra("hoax_id", id);
+                        startActivity(intent);
+                        finish();
+
+                    } else {
+                        Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            protected String doInBackground(Void... voids) {
+                //creating request handler object
+                RequestHandler requestHandler = new RequestHandler();
+                int userid=SharedPrefManager.getInstance(getApplicationContext()).getInt("user_id");
+                //creating request parameters
+                HashMap<String, String> params = new HashMap<>();
+                params.put("hoax_id", id);
+                params.put("user_id", userid+"");
+
+                //returing the response
+                return requestHandler.sendPostRequest(URLs.URL_HOAX_DOWNVOTE, params);
+            }
+        }
+        downvote ul = new downvote();
+        ul.execute();
+    }
+
+
+
+
+
+    private void flag() {
+
+        class flag extends AsyncTask<Void, Void, String> {
+
+            ProgressBar progressBar;
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                progressBar = (ProgressBar) findViewById(R.id.progressBar5);
+                progressBar.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                progressBar.setVisibility(View.GONE);
+
+
+                try {
+                    //converting response to json object
+                    JSONObject obj = new JSONObject(s);
+
+                    //if no error in response
+                    if (obj.getBoolean("status")) {
+                        Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), HoaxActivity.class);
+                        intent.putExtra("hoax_id", id);
+                        startActivity(intent);
+                        finish();
+
+                    } else {
+                        Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            protected String doInBackground(Void... voids) {
+                //creating request handler object
+                RequestHandler requestHandler = new RequestHandler();
+                int userid=SharedPrefManager.getInstance(getApplicationContext()).getInt("user_id");
+                //creating request parameters
+                HashMap<String, String> params = new HashMap<>();
+                params.put("hoax_id", id);
+                params.put("user_id", userid+"");
+
+                //returing the response
+                return requestHandler.sendPostRequest(URLs.URL_HOAX_FLAG, params);
+            }
+        }
+        flag ul = new flag();
+        ul.execute();
+    }
+
+
+
+    private void upvote() {
+
+        class upvote extends AsyncTask<Void, Void, String> {
+
+            ProgressBar progressBar;
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                progressBar = (ProgressBar) findViewById(R.id.progressBar5);
+                progressBar.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                progressBar.setVisibility(View.GONE);
+
+
+                try {
+                    //converting response to json object
+                    JSONObject obj = new JSONObject(s);
+
+                    //if no error in response
+                    if (obj.getBoolean("status")) {
+                        Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), HoaxActivity.class);
+                        intent.putExtra("hoax_id", id);
+                        startActivity(intent);
+                        finish();
+
+                    } else {
+                        Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            protected String doInBackground(Void... voids) {
+                //creating request handler object
+                RequestHandler requestHandler = new RequestHandler();
+                int userid=SharedPrefManager.getInstance(getApplicationContext()).getInt("user_id");
+                //creating request parameters
+                HashMap<String, String> params = new HashMap<>();
+                params.put("hoax_id", id);
+                params.put("user_id", userid+"");
+
+                //returing the response
+                return requestHandler.sendPostRequest(URLs.URL_HOAX_UPVOTE, params);
+            }
+        }
+        upvote ul = new upvote();
+        ul.execute();
+    }
+
 }

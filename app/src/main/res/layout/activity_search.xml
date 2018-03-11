@@ -15,14 +15,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:maxLines="10"
-        android:inputType="textMultiLine" />
+        android:hint="Enter the message"
+        android:inputType="textMultiLine"
+        android:maxLines="10" />
 
     <Button
         android:id="@+id/uploadimg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:onClick="uploadImg"
         android:text="Upload Image" />
 
     <Button

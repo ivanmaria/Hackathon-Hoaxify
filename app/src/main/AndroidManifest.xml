@@ -11,20 +11,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login">
+        <activity
+            android:name=".Login"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Register" />
-        <activity android:name=".HoaxActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".TextSearch" />
-        <activity android:name=".ImageSearch"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Register"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".HoaxActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ProfileActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SearchActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

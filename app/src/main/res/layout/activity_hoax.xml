@@ -50,6 +50,7 @@
                         android:adjustViewBounds="true"
                         android:paddingHorizontal="25dp"
                         android:paddingVertical="10dp"
+                        android:visibility="gone"
                         app:srcCompat="@mipmap/ic_launcher" />
 
                     <LinearLayout

@@ -26,6 +26,9 @@ EditText inputtext;
       Search();
     }
 
+    public void uploadImg(View v){
+        Toast.makeText(this, "Not Implemented!", Toast.LENGTH_SHORT).show();
+    }
 
 
 

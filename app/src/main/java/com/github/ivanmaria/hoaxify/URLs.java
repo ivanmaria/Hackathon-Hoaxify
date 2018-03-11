@@ -6,7 +6,7 @@ package com.github.ivanmaria.hoaxify;
 
 public class URLs {
 
-    private static final String ROOT_URL = "http://192.168.0.105/hoax/";
+    private static final String ROOT_URL = "http://10.0.7.61/hoax/";
 
     public static final String URL_REGISTER = ROOT_URL + "registration.php";
     public static final String URL_LOGIN= ROOT_URL + "login.php";
@@ -16,6 +16,9 @@ public class URLs {
     public static final String URL_SEARCH_TEXT= ROOT_URL + "search.php";
     public static final String URL_CREATE_HOAX= ROOT_URL + "new_hoax.php";
     public static final String URL_INSERT_COMMENT= ROOT_URL + "insert_comment.php";
+    public static final String URL_HOAX_UPVOTE= ROOT_URL + "upvote_hoax.php";
+    public static final String URL_HOAX_DOWNVOTE= ROOT_URL + "down_vote.php";
+    public static final String URL_HOAX_FLAG= ROOT_URL + "flag_hoax.php";
 
 
 
