@@ -55,7 +55,12 @@ public class MainActivity extends AppCompatActivity {
         loadMyHoax();
     }
 
-
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        finish();
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return super.onOptionsItemSelected(item);
