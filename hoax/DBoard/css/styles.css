@@ -1,0 +1,56 @@
+
+body {
+	background-color:#E5E7E9;
+  margin-bottom: 60px;
+}
+/*
+.dropdown-item > .active > a,
+.dropdown-item > .active > a:hover
+.dropdown-item > .active > a:focus {
+color: #555555!important; 
+background-color: #e7e7e7!important;
+}*/
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 50px;
+    width: 30px;
+    outline: white;
+    background-color:black;
+    border: 1px solid black;
+}
+
+
+
+.navbar{
+	height: 60px;
+	background-color: #ff66ff;
+}
+
+.container{
+  padding-top: 30px;
+  text-align: center;
+}
+
+.container-fluid{
+	padding: 0px;
+
+}
+.row{
+	padding: 15px;
+}
+
+.card-body{
+	height: 125px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  /*height: 60px;*/
+}
